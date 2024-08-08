@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package heroacademy;
+
+option go_package = "heroacademy-proto";
+
+service TrainingService {
+  rpc TrainHero (HeroRequest) returns (HeroResponse) {}
+}
+
+message HeroRequest {
+  string hero_name = 1;
+  string quirk = 2;
+}
+
+message HeroResponse {
+  string result = 1;
+}
